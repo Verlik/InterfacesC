@@ -1,0 +1,20 @@
+﻿<Window x:Class="Agenda.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Agenda"
+        mc:Ignorable="d"
+        Title="Contacto" Height="422" Width="400" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,6">
+        <TextBox x:Name="NombreTxt" Validation.Error="Validation_Error" Text="{Binding Path=nombre, NotifyOnValidationError=True, ValidatesOnDataErrors=True }" Margin="88,90,0,0" Width="224"  Height="18" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="ApellidoTxt" Validation.Error="Validation_Error" Margin="88,185,0,0" TextWrapping="Wrap" Text="{Binding Path=apellido, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="18" Width="224" HorizontalAlignment="Left" />
+        <TextBox x:Name="MailTxt" Validation.Error="Validation_Error" Margin="88,276,0,0" TextWrapping="Wrap" Text="{Binding Path=mail, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Height="18" Width="224" HorizontalAlignment="Left"/>
+        <Button Content="Agregar" Name="agregar" Margin="249,335,0,0" VerticalAlignment="Top" Click="Button_Click" Height="20" HorizontalAlignment="Left" Width="74"/>
+        <Button Content="Cerrar" Margin="90,335,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="20" HorizontalAlignment="Left" Width="74"/>
+        <Label Content="Nombre :" Margin="88,45,11,0" Height="26" VerticalAlignment="Top"/>
+        <Label Content="Apellido :" Margin="88,132,11,0" VerticalAlignment="Top" Height="26"/>
+        <Label Content="Mail :" Margin="88,231,11,0" VerticalAlignment="Top" Height="26"/>
+
+    </Grid>
+</Window>
